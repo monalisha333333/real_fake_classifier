@@ -1,0 +1,17 @@
+batch_size: 32
+device: cuda
+learning_rate: 0.0001
+model_name: cospy
+num_epochs: 20
+num_workers: 4
+result_dir: results
+save_dir: checkpoints
+test_dir:
+- data/mscoco/Test/playgroundai@playground-v2-256px-base
+- data/CommunityForensic/Test
+- data/ghibli/Test
+- data/WA/Test
+train_dir:
+- datasmall/mscoco/Train
+val_dir:
+- datasmall/mscoco/Validation

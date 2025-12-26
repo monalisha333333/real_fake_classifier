@@ -1,0 +1,19 @@
+batch_size: 32
+num_epochs: 20
+learning_rate: 0.0001
+num_workers: 4
+model_name: "PCA" # options: resnet50, resnet18, clip_vit, real_detector_v0, cospy, freq_filter,PCA, freq
+device: "cuda"
+save_dir: "checkpoints"
+result_dir: "results"
+train_dir:
+  - "datapca/mscoco/Train"
+  
+val_dir:
+  - "datapca/mscoco/Validation"
+  
+test_dir:
+  - "datapca/mscoco/Test/playgroundai@playground-v2-256px-base"
+  - "datapca/CommunityForensic/Test"
+  - "datapca/ghibli/Test"
+  - "datapca/WA/Test"

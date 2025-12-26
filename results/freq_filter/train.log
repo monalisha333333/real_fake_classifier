@@ -1,0 +1,62 @@
+2025-12-26 12:18:48 | INFO | Epoch [1/20] Train Loss: 0.5412 Train Acc: 0.7600Validation Loss: 0.7899 Validation Acc: 0.5134
+2025-12-26 12:18:50 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 51.34] 
+2025-12-26 12:20:48 | INFO | Epoch [2/20] Train Loss: 0.3065 Train Acc: 0.8825Validation Loss: 0.3500 Validation Acc: 0.8527
+2025-12-26 12:20:50 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 85.27] 
+2025-12-26 12:22:48 | INFO | Epoch [3/20] Train Loss: 0.2675 Train Acc: 0.8975Validation Loss: 0.2318 Validation Acc: 0.9107
+2025-12-26 12:22:50 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 91.07] 
+2025-12-26 12:24:48 | INFO | Epoch [4/20] Train Loss: 0.2293 Train Acc: 0.9150Validation Loss: 0.2155 Validation Acc: 0.9375
+2025-12-26 12:24:50 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 93.75] 
+2025-12-26 12:26:48 | INFO | Epoch [5/20] Train Loss: 0.2017 Train Acc: 0.9213Validation Loss: 0.1774 Validation Acc: 0.9464
+2025-12-26 12:26:51 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 94.64] 
+2025-12-26 12:28:48 | INFO | Epoch [6/20] Train Loss: 0.2110 Train Acc: 0.9163Validation Loss: 0.1817 Validation Acc: 0.9464
+2025-12-26 12:53:50 | INFO | Epoch [1/20] Train Loss: 0.6343 Train Acc: 0.6875Validation Loss: 0.5890 Validation Acc: 0.6920
+2025-12-26 12:53:52 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 69.20] 
+2025-12-26 12:55:50 | INFO | Epoch [2/20] Train Loss: 0.3495 Train Acc: 0.8500Validation Loss: 0.4142 Validation Acc: 0.8170
+2025-12-26 12:55:52 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 81.70] 
+2025-12-26 12:57:51 | INFO | Epoch [3/20] Train Loss: 0.2766 Train Acc: 0.8888Validation Loss: 0.5781 Validation Acc: 0.7589
+2025-12-26 12:59:49 | INFO | Epoch [4/20] Train Loss: 0.2513 Train Acc: 0.9075Validation Loss: 0.2190 Validation Acc: 0.9196
+2025-12-26 12:59:52 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 91.96] 
+2025-12-26 13:01:50 | INFO | Epoch [5/20] Train Loss: 0.2128 Train Acc: 0.9263Validation Loss: 0.2498 Validation Acc: 0.9062
+2025-12-26 13:03:48 | INFO | Epoch [6/20] Train Loss: 0.1898 Train Acc: 0.9237Validation Loss: 0.2598 Validation Acc: 0.8839
+2025-12-26 13:05:47 | INFO | Epoch [7/20] Train Loss: 0.2124 Train Acc: 0.9175Validation Loss: 0.4904 Validation Acc: 0.8214
+2025-12-26 13:07:45 | INFO | Epoch [8/20] Train Loss: 0.1979 Train Acc: 0.9237Validation Loss: 0.2066 Validation Acc: 0.9330
+2025-12-26 13:07:47 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 93.30] 
+2025-12-26 13:09:45 | INFO | Epoch [9/20] Train Loss: 0.1537 Train Acc: 0.9500Validation Loss: 0.1900 Validation Acc: 0.9286
+2025-12-26 13:11:44 | INFO | Epoch [10/20] Train Loss: 0.1709 Train Acc: 0.9337Validation Loss: 0.2111 Validation Acc: 0.8973
+2025-12-26 13:13:42 | INFO | Epoch [11/20] Train Loss: 0.1727 Train Acc: 0.9425Validation Loss: 0.2315 Validation Acc: 0.9241
+2025-12-26 13:15:40 | INFO | Epoch [12/20] Train Loss: 0.1722 Train Acc: 0.9287Validation Loss: 0.2210 Validation Acc: 0.9286
+2025-12-26 13:17:39 | INFO | Epoch [13/20] Train Loss: 0.1517 Train Acc: 0.9487Validation Loss: 0.1522 Validation Acc: 0.9643
+2025-12-26 13:17:41 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 96.43] 
+2025-12-26 13:19:40 | INFO | Epoch [14/20] Train Loss: 0.1357 Train Acc: 0.9613Validation Loss: 0.1759 Validation Acc: 0.9464
+2025-12-26 13:21:38 | INFO | Epoch [15/20] Train Loss: 0.1337 Train Acc: 0.9525Validation Loss: 0.2010 Validation Acc: 0.9464
+2025-12-26 13:23:37 | INFO | Epoch [16/20] Train Loss: 0.1492 Train Acc: 0.9400Validation Loss: 0.1621 Validation Acc: 0.9464
+2025-12-26 13:25:36 | INFO | Epoch [17/20] Train Loss: 0.1231 Train Acc: 0.9613Validation Loss: 0.4487 Validation Acc: 0.8393
+2025-12-26 13:27:35 | INFO | Epoch [18/20] Train Loss: 0.1384 Train Acc: 0.9500Validation Loss: 0.1359 Validation Acc: 0.9821
+2025-12-26 13:27:37 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 98.21] 
+2025-12-26 13:29:36 | INFO | Epoch [19/20] Train Loss: 0.1215 Train Acc: 0.9563Validation Loss: 0.1876 Validation Acc: 0.9420
+2025-12-26 13:31:34 | INFO | Epoch [20/20] Train Loss: 0.1417 Train Acc: 0.9500Validation Loss: 0.1777 Validation Acc: 0.9643
+2025-12-26 13:31:34 | INFO | Total time taken (sec): 2383.591714859009
+2025-12-26 13:31:35 | INFO | Training complete.
+2025-12-26 17:48:29 | INFO | Epoch [1/20] Train Loss: 0.5702 Train Acc: 0.7163Validation Loss: 0.9484 Validation Acc: 0.4464
+2025-12-26 17:48:32 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 44.64] 
+2025-12-26 17:50:28 | INFO | Epoch [2/20] Train Loss: 0.3144 Train Acc: 0.8888Validation Loss: 0.4229 Validation Acc: 0.8125
+2025-12-26 17:50:30 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 81.25] 
+2025-12-26 17:52:26 | INFO | Epoch [3/20] Train Loss: 0.2600 Train Acc: 0.8938Validation Loss: 0.2063 Validation Acc: 0.9286
+2025-12-26 17:52:29 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 92.86] 
+2025-12-26 17:54:25 | INFO | Epoch [4/20] Train Loss: 0.2343 Train Acc: 0.9163Validation Loss: 0.2036 Validation Acc: 0.9286
+2025-12-26 17:56:22 | INFO | Epoch [5/20] Train Loss: 0.2316 Train Acc: 0.9000Validation Loss: 0.1746 Validation Acc: 0.9554
+2025-12-26 17:56:24 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 95.54] 
+2025-12-26 17:58:21 | INFO | Epoch [6/20] Train Loss: 0.1898 Train Acc: 0.9300Validation Loss: 0.2544 Validation Acc: 0.8973
+2025-12-26 18:00:17 | INFO | Epoch [7/20] Train Loss: 0.2235 Train Acc: 0.9025Validation Loss: 0.1744 Validation Acc: 0.9330
+2025-12-26 18:02:14 | INFO | Epoch [8/20] Train Loss: 0.1859 Train Acc: 0.9225Validation Loss: 0.1706 Validation Acc: 0.9598
+2025-12-26 18:02:17 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 95.98] 
+2025-12-26 18:04:13 | INFO | Epoch [9/20] Train Loss: 0.1668 Train Acc: 0.9363Validation Loss: 0.1210 Validation Acc: 0.9643
+2025-12-26 18:04:15 | INFO | Model saved at checkpoints/freq_filter/ with val accuracy 96.43] 
+2025-12-26 18:06:12 | INFO | Epoch [10/20] Train Loss: 0.1757 Train Acc: 0.9425Validation Loss: 0.2391 Validation Acc: 0.9330
+2025-12-26 18:08:08 | INFO | Epoch [11/20] Train Loss: 0.1666 Train Acc: 0.9363Validation Loss: 0.1646 Validation Acc: 0.9598
+2025-12-26 18:10:05 | INFO | Epoch [12/20] Train Loss: 0.1902 Train Acc: 0.9163Validation Loss: 0.1939 Validation Acc: 0.9286
+2025-12-26 18:12:02 | INFO | Epoch [13/20] Train Loss: 0.1872 Train Acc: 0.9300Validation Loss: 0.1790 Validation Acc: 0.9420
+2025-12-26 18:13:58 | INFO | Epoch [14/20] Train Loss: 0.1721 Train Acc: 0.9400Validation Loss: 0.2564 Validation Acc: 0.9196
+2025-12-26 18:13:58 | INFO | Training ends as no increase in accuracy in last 5 epochs.
+2025-12-26 18:13:58 | INFO | Total time taken (sec): 1644.526980638504
+2025-12-26 18:13:59 | INFO | Training complete.

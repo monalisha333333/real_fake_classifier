@@ -1,0 +1,19 @@
+2025-12-26 15:46:43 | INFO | Epoch [1/20] Train Loss: 0.5656 Train Acc: 0.7037Validation Loss: 1.0938 Validation Acc: 0.4464
+2025-12-26 15:46:44 | INFO | Model saved at checkpoints/freq/ with val accuracy 44.64] 
+2025-12-26 15:48:24 | INFO | Epoch [2/20] Train Loss: 0.4232 Train Acc: 0.8125Validation Loss: 2.5988 Validation Acc: 0.4464
+2025-12-26 15:50:05 | INFO | Epoch [3/20] Train Loss: 0.3812 Train Acc: 0.8363Validation Loss: 1.5828 Validation Acc: 0.5446
+2025-12-26 15:50:08 | INFO | Model saved at checkpoints/freq/ with val accuracy 54.46] 
+2025-12-26 15:51:49 | INFO | Epoch [4/20] Train Loss: 0.3770 Train Acc: 0.8512Validation Loss: 0.5592 Validation Acc: 0.7723
+2025-12-26 15:51:51 | INFO | Model saved at checkpoints/freq/ with val accuracy 77.23] 
+2025-12-26 15:53:32 | INFO | Epoch [5/20] Train Loss: 0.3676 Train Acc: 0.8500Validation Loss: 0.5444 Validation Acc: 0.7768
+2025-12-26 15:53:35 | INFO | Model saved at checkpoints/freq/ with val accuracy 77.68] 
+2025-12-26 15:55:16 | INFO | Epoch [6/20] Train Loss: 0.3490 Train Acc: 0.8638Validation Loss: 0.4210 Validation Acc: 0.8125
+2025-12-26 15:55:18 | INFO | Model saved at checkpoints/freq/ with val accuracy 81.25] 
+2025-12-26 15:56:59 | INFO | Epoch [7/20] Train Loss: 0.3360 Train Acc: 0.8638Validation Loss: 0.4265 Validation Acc: 0.7589
+2025-12-26 15:58:40 | INFO | Epoch [8/20] Train Loss: 0.3472 Train Acc: 0.8538Validation Loss: 0.8139 Validation Acc: 0.6741
+2025-12-26 16:00:21 | INFO | Epoch [9/20] Train Loss: 0.3335 Train Acc: 0.8612Validation Loss: 0.4016 Validation Acc: 0.7902
+2025-12-26 16:02:02 | INFO | Epoch [10/20] Train Loss: 0.3103 Train Acc: 0.8800Validation Loss: 0.8137 Validation Acc: 0.6964
+2025-12-26 16:03:42 | INFO | Epoch [11/20] Train Loss: 0.2968 Train Acc: 0.8825Validation Loss: 0.5750 Validation Acc: 0.7054
+2025-12-26 16:03:42 | INFO | Training ends as no increase in accuracy in last 5 epochs.
+2025-12-26 16:03:42 | INFO | Total time taken (sec): 1120.0588524341583
+2025-12-26 16:03:43 | INFO | Training complete.

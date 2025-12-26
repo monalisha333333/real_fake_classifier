@@ -1,0 +1,19 @@
+batch_size: 32
+device: cuda
+learning_rate: 0.0001
+model_name: real_detector_v0
+num_epochs: 5
+num_workers: 4
+result_dir: results
+save_dir: checkpoints
+test_dir:
+- data/mscoco/Test/playgroundai@playground-v2-256px-base
+- data/CommunityForensic/Test
+- data/ghibli/Test
+- data/WA/Test
+train_dir:
+- data/mscoco/Train
+- data/stable-diffusion-v1-4/Train
+val_dir:
+- data/mscoco/Validation
+- data/stable-diffusion-v1-4/Validation

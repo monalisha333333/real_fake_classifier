@@ -1,0 +1,23 @@
+2025-12-24 17:56:17 | INFO | Epoch [1/20] Train Loss: 0.5620 Train Acc: 0.7250
+2025-12-24 17:56:17 | INFO | Model saved at checkpoints/PCA/ with val accuracy 74.11] 
+2025-12-26 19:47:08 | INFO | Epoch [1/20] Train Loss: 0.7015 Train Acc: 0.5312Validation Loss: 0.6871 Validation Acc: 0.5536
+2025-12-26 19:47:08 | INFO | Model saved at checkpoints/PCA/ with val accuracy 55.36] 
+2025-12-26 19:47:10 | INFO | Epoch [2/20] Train Loss: 0.6642 Train Acc: 0.5863Validation Loss: 0.6831 Validation Acc: 0.5536
+2025-12-26 19:47:12 | INFO | Epoch [3/20] Train Loss: 0.6429 Train Acc: 0.6288Validation Loss: 0.6604 Validation Acc: 0.6161
+2025-12-26 19:47:12 | INFO | Model saved at checkpoints/PCA/ with val accuracy 61.61] 
+2025-12-26 19:47:14 | INFO | Epoch [4/20] Train Loss: 0.6251 Train Acc: 0.6388Validation Loss: 0.6295 Validation Acc: 0.6696
+2025-12-26 19:47:14 | INFO | Model saved at checkpoints/PCA/ with val accuracy 66.96] 
+2025-12-26 19:47:15 | INFO | Epoch [5/20] Train Loss: 0.6113 Train Acc: 0.6625Validation Loss: 0.6093 Validation Acc: 0.6964
+2025-12-26 19:47:15 | INFO | Model saved at checkpoints/PCA/ with val accuracy 69.64] 
+2025-12-26 19:47:17 | INFO | Epoch [6/20] Train Loss: 0.5970 Train Acc: 0.6937Validation Loss: 0.6020 Validation Acc: 0.6652
+2025-12-26 19:47:19 | INFO | Epoch [7/20] Train Loss: 0.5859 Train Acc: 0.6887Validation Loss: 0.6157 Validation Acc: 0.6562
+2025-12-26 19:47:21 | INFO | Epoch [8/20] Train Loss: 0.5722 Train Acc: 0.7175Validation Loss: 0.5792 Validation Acc: 0.7277
+2025-12-26 19:47:21 | INFO | Model saved at checkpoints/PCA/ with val accuracy 72.77] 
+2025-12-26 19:47:22 | INFO | Epoch [9/20] Train Loss: 0.5700 Train Acc: 0.7063Validation Loss: 0.5843 Validation Acc: 0.7054
+2025-12-26 19:47:24 | INFO | Epoch [10/20] Train Loss: 0.5717 Train Acc: 0.7087Validation Loss: 0.5718 Validation Acc: 0.6920
+2025-12-26 19:47:26 | INFO | Epoch [11/20] Train Loss: 0.5557 Train Acc: 0.7288Validation Loss: 0.5833 Validation Acc: 0.7009
+2025-12-26 19:47:27 | INFO | Epoch [12/20] Train Loss: 0.5530 Train Acc: 0.7312Validation Loss: 0.5811 Validation Acc: 0.6964
+2025-12-26 19:47:29 | INFO | Epoch [13/20] Train Loss: 0.5491 Train Acc: 0.7275Validation Loss: 0.5776 Validation Acc: 0.6875
+2025-12-26 19:47:29 | INFO | Training ends as no increase in accuracy in last 5 epochs.
+2025-12-26 19:47:29 | INFO | Total time taken (sec): 22.927708625793457
+2025-12-26 19:47:30 | INFO | Training complete.

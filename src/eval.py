@@ -27,18 +27,20 @@ def save_masks(masks, mask_dir, paths):
 
 def evaluate_model(model, dataloader, device, result_ds,result_dir):
     model.eval()
+    model.to(device)
     total_acc = 0
+
+    # print("Devices:",next(model.parameters()).device)
 
     with torch.no_grad():
         for index, batch in enumerate(tqdm(dataloader)):
-        # for index, batch in enumerate(dataloader):
-        # for images, labels in dataloader:
             images, labels, paths  = batch[0], batch[1], batch[2]
             images, labels = images.to(device), labels.to(device)
+            # print(images.device)
             outputs = model(images)
             # outputs, masks = model(images,False, True)
             # save_masks(masks,result_dir, paths)
-            total_acc += accuracy(outputs, labels)
+            # total_acc += accuracy(outputs, labels)
             preds = outputs.argmax(dim=1)
             if index == 0:
                 predictions = preds
@@ -48,12 +50,15 @@ def evaluate_model(model, dataloader, device, result_ds,result_dir):
                 predictions = torch.cat((predictions, preds), 0)
                 targets = torch.cat((targets,labels), 0)
                 paths_list += paths
-        # Write predictions
-        df = pd.DataFrame({
-            "image_name": paths_list,
-            "target" : targets.cpu().numpy(),
-            "predicted" : predictions.cpu().numpy()
-        })
-        df.to_csv(result_ds, index=False)    
+    
+    # Write predictions
+    acc = accuracy(predictions, targets)
+    targets, predictions = targets.cpu().numpy(), predictions.cpu().numpy()    
+    df = pd.DataFrame({
+        "image_name": paths_list,
+        "target" : targets,
+        "predicted" : predictions
+    })
+    df.to_csv(result_ds, index=False) 
 
-    return total_acc / len(dataloader)
+    return acc

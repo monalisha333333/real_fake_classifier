@@ -10,6 +10,8 @@ from src.train import train_one_epoch, validate
 from src.plot_metrics import plot_metrics, plot_train_batch_metrics
 
 st=time.time()
+torch.cuda.memory.reset_peak_memory_stats()
+
 with open("config/config.yaml", "r") as f:
     cfg = yaml.safe_load(f)
 
@@ -48,6 +50,15 @@ model = get_model(cfg["model_name"]).to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=cfg["learning_rate"])
 max_val_acc = 0
+# max_val_AP = 0
+# max_val_AUC = 0
+# min_val_FPR = 100
+
+max_val_acc_epoch = 0
+# max_val_AP_epoch = 0
+# max_val_AUC_epoch = 0
+# min_val_FPR_epoch = 0
+
 checkpoint_dir = "checkpoints/"+cfg["model_name"]+"/"
 os.makedirs(checkpoint_dir,exist_ok=True)
 
@@ -55,17 +66,19 @@ train_losses=[]
 train_accuracies=[]
 val_losses=[]
 val_accuracies=[]
+# val_average_precisions=[]
+# val_False_positive_rate=[]
+# val_Area_Under_Curve=[]
+
 train_batch_losses=[]
 train_batch_accuracies=[]
-val_batch_losses=[]
-val_batch_accuracies=[]
 
-tolerance_limit = 5
+tolerance_limit = 10
 no_acc_increase_cnt = 0
 
 for epoch in range(cfg["num_epochs"]):
-    train_loss, train_acc, train_loss_h, train_acc_h, val_loss_h, val_acc_h, max_val_acc = train_one_epoch(
-        model, train_loader, val_loader, criterion, optimizer, device, tolerance_limit,max_val_acc, checkpoint_dir
+    train_loss, train_acc, train_loss_h, train_acc_h = train_one_epoch(
+        model, train_loader, criterion, optimizer, device
     )
     
     train_losses.append(train_loss)
@@ -73,8 +86,6 @@ for epoch in range(cfg["num_epochs"]):
 
     train_batch_losses.extend(train_loss_h)
     train_batch_accuracies.extend(train_acc_h)
-    val_batch_losses.extend(val_loss_h)
-    val_batch_accuracies.extend(val_acc_h)
 
     val_loss, val_acc = validate(
         model, val_loader, criterion, device
@@ -83,11 +94,11 @@ for epoch in range(cfg["num_epochs"]):
     val_accuracies.append(val_acc)
 
     logger.info(
-        f"Epoch [{epoch+1}/{cfg['num_epochs']}] "
+        f"Epoch [{epoch+1}/{cfg['num_epochs']}] \n"
         f"Train Loss: {train_loss:.4f} "
-        f"Train Acc: {train_acc:.4f}"
+        f"Train Acc: {train_acc:.4f} \n"
         f"Validation Loss: {val_loss:.4f} "
-        f"Validation Acc: {val_acc:.4f}"
+        f"Validation Acc: {val_acc:.4f} \n"
     )
     if val_acc > max_val_acc:
         max_val_acc = val_acc
@@ -95,6 +106,7 @@ for epoch in range(cfg["num_epochs"]):
         logger.info(
             f"Model saved at {checkpoint_dir} with val accuracy {max_val_acc*100:.2f}] "
         )
+        max_val_acc_epoch = epoch + 1
         no_acc_increase_cnt = 0
     else:
         no_acc_increase_cnt += 1
@@ -105,7 +117,7 @@ for epoch in range(cfg["num_epochs"]):
         )
         break
 
-    if no_acc_increase_cnt == tolerance_limit:
+    if no_acc_increase_cnt > tolerance_limit:
         logger.info(
             f"Training ends as no increase in accuracy in last {no_acc_increase_cnt} epochs."
         )
@@ -113,11 +125,13 @@ for epoch in range(cfg["num_epochs"]):
 
 et=time.time()
 logger.info(
-    f"Total time taken (sec): {et-st}"
+    f"Total time taken (sec): {et-st} \n"
+    f"Best Validation Accuracy: {max_val_acc*100:.2f} at epoch {max_val_acc_epoch} \n"
 )
 
-plot_metrics(train_losses, train_accuracies, val_losses, val_accuracies,result_dir)
-plot_train_batch_metrics(train_batch_losses, train_batch_accuracies,val_batch_losses, val_batch_accuracies, result_dir)
+plot_metrics(train_losses, train_accuracies, val_losses, val_accuracies, result_dir)
+plot_train_batch_metrics(train_batch_losses, train_batch_accuracies, result_dir)
 logger.info(
     f"Training complete."
 )
+logger.info("Max GPU memory allocated: ", torch.cuda.memory.max_memory_allocated)   

@@ -3,10 +3,9 @@ from transformers import CLIPModel
 import torchvision.models as models
 from src.models import RealDetector_v0
 from src.models import CospyDetector
-from src.models import FreqFilterDetector
-from src.models import PCADetector
-from src.models import FreqDetector
-
+from src.models import FreqFilterDetector, FreqDetector
+from src.models import PCADetector, PCADetector_v1
+from src.models_pretrained import CoSpyFusionDetector
 
 def get_model(model_name="resnet50"):
     if model_name == "resnet50":
@@ -20,6 +19,17 @@ def get_model(model_name="resnet50"):
     elif model_name == "cospy":
         model = CospyDetector(num_classes=2)
         print("getting model architecture from CospyDetector")
+    elif model_name == "cospy_pre":
+        # Load the fusion detector with pre-trained weights
+        semantic_weights_path = "checkpoints/sd-v1_4/semantic_weights.pth"
+        artifact_weights_path = "checkpoints/sd-v1_4/artifact_weights.pth"
+        fusion_weights_path = "checkpoints/sd-v1_4/fusion_weights.pth"
+        model = CoSpyFusionDetector(
+            semantic_weights_path=semantic_weights_path,
+            artifact_weights_path=artifact_weights_path
+        )
+        model.load_weights(fusion_weights_path)
+        print("getting model architecture from pretrained Cospy")
     elif model_name == "real_detector_v0":
         model = RealDetector_v0(num_classes=2)
         print("getting model architecture from RealDetector_v0")
@@ -32,6 +42,9 @@ def get_model(model_name="resnet50"):
     elif model_name == "PCA":
         model = PCADetector(num_classes=2)
         print("getting model architecture from PCADetector")
+    elif model_name == "PCA_v1":
+        model = PCADetector_v1(num_classes=2)
+        print("getting model architecture from PCADetector_v1")
     elif model_name == "clip_vit":
         model, self.preprocess = clip.load(name, device="cpu") # self.preprecess will not be used during training, which is handled in Dataset class 
         modelfc = nn.Linear( CHANNELS[name], 2)

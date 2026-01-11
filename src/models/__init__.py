@@ -5,5 +5,6 @@ from .real_detector_v0 import RealDetector_v0, LabelSmoothingBCEWithLogits
 from .freq_filter_detector import FreqFilterDetector
 from .PCA_detector import PCADetector
 from .fft_detector import FreqDetector
+from .PCA_detector_v1 import PCADetector_v1
 
 __all__ = ["ArtifactDetector", "SemanticDetector", "CospyCalibrateDetector", "CospyDetector", "LabelSmoothingBCEWithLogits","FreqFilterDetector"]
